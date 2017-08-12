@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myNewsLabel">Create or edit a News</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.news.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.news.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newsID">News ID</label>
+            <input type="number" class="form-control" name="newsID" id="field_newsID"
+                    ng-model="vm.news.newsID"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newsTitle">News Title</label>
+            <input type="text" class="form-control" name="newsTitle" id="field_newsTitle"
+                    ng-model="vm.news.newsTitle"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newsDescription">News Description</label>
+            <input type="text" class="form-control" name="newsDescription" id="field_newsDescription"
+                    ng-model="vm.news.newsDescription"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newsBody">News Body</label>
+            <input type="text" class="form-control" name="newsBody" id="field_newsBody"
+                    ng-model="vm.news.newsBody"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newsKeywords">News Keywords</label>
+            <input type="text" class="form-control" name="newsKeywords" id="field_newsKeywords"
+                    ng-model="vm.news.newsKeywords"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newsCategory">News Category</label>
+            <input type="text" class="form-control" name="newsCategory" id="field_newsCategory"
+                    ng-model="vm.news.newsCategory"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newsUrl">News Url</label>
+            <input type="text" class="form-control" name="newsUrl" id="field_newsUrl"
+                    ng-model="vm.news.newsUrl"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "newsID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "newsTitle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "newsDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "newsBody",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "newsKeywords",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "newsCategory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "newsUrl",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170812142618",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "news",
+    "pagination": "pager"
+}
